@@ -1,6 +1,6 @@
-package minhtrung.bai3.Validator.annotation;
+package minhtrung.bai3.validator.annotation;
 
-import minhtrung.bai3.Validator.ValidCategoryIdValidator;
+import minhtrung.bai3.validator.ValidCategoryIdValidator;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 import java.lang.annotation.Documented;

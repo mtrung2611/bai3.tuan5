@@ -12,9 +12,9 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 
-import java.util.Collection;
+
 import java.util.List;
-import java.util.Optional;
+
 
 @Controller
 @RequestMapping("/book")
@@ -56,7 +56,8 @@ public class BookController {
     @GetMapping("/edit/{id}")
     public String editBookForm(@PathVariable("id") Long id, Model model){
        Book book = bookService.getBookById(id);
-       List<Category>categories = categoryService.getAllCategories();
+
+       List<Category> categories =  categoryService.getAllCategories();
        return "book/edit";
     }
 

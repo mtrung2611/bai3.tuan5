@@ -1,7 +1,7 @@
-package minhtrung.bai3.Validator;
+package minhtrung.bai3.validator;
 
 import minhtrung.bai3.entity.Category;
-import minhtrung.bai3.Validator.annotation.ValidCategoryId;
+import minhtrung.bai3.validator.annotation.ValidCategoryId;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 public class ValidCategoryIdValidator  implements ConstraintValidator<ValidCategoryId, Category>{

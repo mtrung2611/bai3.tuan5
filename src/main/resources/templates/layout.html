@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>My App</title>
@@ -23,6 +23,14 @@
                     </li>
                     <li class="nav-item"><a class="nav-link" href="/book">List Book</a> </li>
                     <li class="nav-item"><a class="nav-link" href="/book/add">Add Book</a> </li>
+                    <li sec:authorize ="isAuthenticated()">
+                        <form th:action="@{/logout}" method="post">
+                            <button class="btn btn-outline-danger" type="submit">Log out</button>
+                        </form>
+                    </li>
+                    <li sec:authorize="!isAuthenticated()">
+                        <a class="btn btn-outline-primary" href="/login">Login</a>
+                    </li>
                 </ul>
             </div>
         </div>
